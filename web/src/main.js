@@ -35,6 +35,14 @@ import {
 import {router} from "@/router";
 import 'v3-waterfall/dist/style.css'
 import V3waterfall from "v3-waterfall";
+import { createI18n } from 'vue-i18n'
+const i18n = createI18n({
+    locale: 'zh-cn',
+    messages: {
+        'zh-cn': require('./locales/zh-cn.json'),
+        'en': require('./locales/en.json')
+    }
+})
 
 const app = createApp(App)
 app.use(createPinia())
@@ -66,5 +74,6 @@ app.use(Uploader);
 app.use(Tag);
 app.use(V3waterfall)
 app.use(router).use(ElementPlus).mount('#app')
+app.use(i18n)
 
 
