@@ -34,18 +34,19 @@ import {useRouter} from "vue-router";
 import {checkSession} from "@/action/session";
 import {isMobile} from "@/utils/libs";
 import {ref} from "vue";
+import i18n from "@/locales/i18n";
 
 const router = useRouter();
 const logo = '/images/logo.png';
 const navs = ref([
-  {path: "/chat", icon_path: "/images/chat.png", title: "对话聊天"},
-  {path: "/mj", icon_path: "/images/mj.png", title: "MJ 绘画"},
-  {path: "/sd", icon_path: "/images/sd.png", title: "SD 绘画"},
-  {path: "/apps", icon: "menu", title: "应用中心"},
-  {path: "/images-wall", icon: "image-list", title: "作品展示"},
-  {path: "/knowledge", icon: "book", title: "知识库"},
-  {path: "/member", icon: "vip-user", title: "会员计划"},
-  {path: "/invite", icon: "share", title: "推广计划"},
+  {path: "/chat", icon_path: "/images/chat.png", title: i18n.global.t("对话聊天")},
+  {path: "/mj", icon_path: "/images/mj.png", title: i18n.global.t("MJ 绘画")},
+  {path: "/sd", icon_path: "/images/sd.png", title: i18n.global.t("SD 绘画")},
+  {path: "/apps", icon: "menu", title: i18n.global.t("应用中心")},
+  {path: "/images-wall", icon: "image-list", title: i18n.global.t("作品展示")},
+  {path: "/knowledge", icon: "book", title: i18n.global.t("知识库")},
+  {path: "/member", icon: "vip-user", title: i18n.global.t("会员计划")},
+  {path: "/invite", icon: "share", title: i18n.global.t("推广计划")},
 ])
 const curPath = ref(router.currentRoute.value.path)
 

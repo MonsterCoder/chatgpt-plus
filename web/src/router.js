@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory} from "vue-router";
+import i18n from "@/locales/i18n";
 
 const routes = [
     {
@@ -219,10 +220,11 @@ const router = createRouter({
 })
 
 let prevRoute = null
+
 // dynamic change the title when router change
 router.beforeEach((to, from, next) => {
     if (to.meta.title) {
-        document.title = `${to.meta.title} | ${process.env.VUE_APP_TITLE}`
+        document.title = `${ i18n.global.t(to.meta.title)} | ${ to.meta.title }| ${process.env.VUE_APP_TITLE}`
     }
     prevRoute = from
     next()

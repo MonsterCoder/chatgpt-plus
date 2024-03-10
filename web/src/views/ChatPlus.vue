@@ -3,11 +3,11 @@
     <el-container>
       <el-aside>
         <div class="title-box">
-          <span>{{ title }}</span>
+          <span> {{ $t(title) }}</span>
         </div>
         <div class="chat-list">
           <div class="search-box">
-            <el-input v-model="chatName" class="w-50 m-2" size="small" placeholder="搜索会话" @keyup="searchChat">
+            <el-input v-model="chatName" class="w-50 m-2" size="small" :placeholder= "$t('搜索会话')" @keyup="searchChat">
               <template #prefix>
                 <el-icon class="el-input__icon">
                   <Search/>
@@ -82,7 +82,7 @@
       <el-main v-loading="loading" element-loading-background="rgba(122, 122, 122, 0.3)">
         <div class="chat-head">
           <div class="chat-config">
-            <span class="role-select-label">聊天角色：</span>
+            <span class="role-select-label">{{ $t("聊天角色") }}：</span>
             <el-select v-model="roleId" filterable placeholder="角色" class="role-select" @change="newChat">
               <el-option
                   v-for="item in roles"
@@ -109,19 +109,19 @@
               <el-icon>
                 <Plus/>
               </el-icon>
-              新建对话
+              {{ $t("新建对话") }}
             </el-button>
 
             <el-button type="success" @click="exportChat" plain>
               <i class="iconfont icon-export"></i>
-              <span>导出会话</span>
+              <span>{{ $t("导出会话") }}</span>
             </el-button>
 
             <el-button type="warning" @click="showFeedbackDialog = true">
               <el-icon>
                 <Promotion/>
               </el-icon>
-              <span>意见反馈</span>
+              <span>{{ $t("意见反馈") }}</span>
             </el-button>
           </div>
         </div>
@@ -278,7 +278,7 @@ import {checkSession} from "@/action/session";
 import Welcome from "@/components/Welcome.vue";
 import ChatMidJourney from "@/components/ChatMidJourney.vue";
 import FileSelect from "@/components/FileSelect.vue";
-
+import i18n from "@/locales/i18n";
 const title = ref('ChatGPT-智能助手');
 const models = ref([])
 const modelID = ref(0)
