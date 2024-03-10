@@ -44,9 +44,7 @@ const navs = ref([
   {path: "/sd", icon_path: "/images/sd.png", title: i18n.global.t("SD 绘画")},
   {path: "/apps", icon: "menu", title: i18n.global.t("应用中心")},
   {path: "/images-wall", icon: "image-list", title: i18n.global.t("作品展示")},
-  {path: "/knowledge", icon: "book", title: i18n.global.t("知识库")},
-  {path: "/member", icon: "vip-user", title: i18n.global.t("会员计划")},
-  {path: "/invite", icon: "share", title: i18n.global.t("推广计划")},
+  {path: "/knowledge", icon: "book", title: i18n.global.t("知识库")}
 ])
 const curPath = ref(router.currentRoute.value.path)
 

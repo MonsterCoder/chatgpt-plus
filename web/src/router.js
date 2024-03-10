@@ -22,18 +22,6 @@ const routes = [
                 component: () => import('@/views/ImageMj.vue'),
             },
             {
-                name: 'image-sd',
-                path: '/sd',
-                meta: {title: 'stable diffusion 绘画中心'},
-                component: () => import('@/views/ImageSd.vue'),
-            },
-            {
-                name: 'member',
-                path: '/member',
-                meta: {title: '会员充值中心'},
-                component: () => import('@/views/Member.vue'),
-            },
-            {
                 name: 'chat-role',
                 path: '/apps',
                 meta: {title: '应用中心'},
@@ -44,12 +32,6 @@ const routes = [
                 path: '/images-wall',
                 meta: {title: '作品展示'},
                 component: () => import('@/views/ImagesWall.vue'),
-            },
-            {
-                name: 'user-invitation',
-                path: '/invite',
-                meta: {title: '推广计划'},
-                component: () => import('@/views/Invitation.vue'),
             },
             {
                 name: 'knowledge',
@@ -186,17 +168,7 @@ const routes = [
                 path: '/mobile/apps',
                 name: 'mobile-apps',
                 component: () => import('@/views/mobile/Apps.vue'),
-            },
-            {
-                path: '/mobile/profile',
-                name: 'mobile-profile',
-                component: () => import('@/views/mobile/Profile.vue'),
-            },
-            {
-                path: '/mobile/invitation',
-                name: 'mobile-invitation',
-                component: () => import('@/views/mobile/Invitation.vue'),
-            },
+            }
         ]
     },
     {
