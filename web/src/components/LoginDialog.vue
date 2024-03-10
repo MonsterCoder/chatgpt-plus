@@ -52,6 +52,7 @@ import {ElMessage} from "element-plus";
 import {setUserToken} from "@/store/session";
 import {validateMobile} from "@/utils/validate";
 import {Lock, User} from "@element-plus/icons-vue";
+import i18n from "@/locales/i18n";
 
 // eslint-disable-next-line no-undef
 const props = defineProps({

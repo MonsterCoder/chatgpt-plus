@@ -241,6 +241,7 @@ import {httpGet} from "@/utils/http";
 import {ElMessage} from "element-plus";
 import Clipboard from "clipboard";
 import {useRouter} from "vue-router";
+import i18n from "@/locales/i18n";
 
 const list = ref([])
 const loading = ref(true)

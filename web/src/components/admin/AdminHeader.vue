@@ -82,6 +82,7 @@ import {useRouter} from 'vue-router';
 import {ArrowDown, ArrowRight, Expand, Fold} from "@element-plus/icons-vue";
 import {httpGet} from "@/utils/http";
 import {ElMessage} from "element-plus";
+import i18n from "@/locales/i18n";
 
 const message = ref(5);
 const sysTitle = ref(process.env.VUE_APP_TITLE)

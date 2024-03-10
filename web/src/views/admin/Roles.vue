@@ -143,7 +143,7 @@ import {httpGet, httpPost} from "@/utils/http";
 import {ElMessage} from "element-plus";
 import {copyObj, removeArrayItem} from "@/utils/libs";
 import {Sortable} from "sortablejs"
-
+import i18n from "@/locales/i18n";
 const showDialog = ref(false)
 const parentBorder = ref(true)
 const childBorder = ref(true)

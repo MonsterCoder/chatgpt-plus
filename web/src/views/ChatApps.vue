@@ -17,7 +17,7 @@
                   <el-icon>
                     <Delete/>
                   </el-icon>
-                  <span>移除应用</span>
+                  <span>{{ $t("移除应用") }} </span>
                 </el-button>
                 <el-button v-else size="small"
                            style="--el-color-primary:#009999"
@@ -48,7 +48,7 @@ import {Delete, Plus} from "@element-plus/icons-vue";
 import LoginDialog from "@/components/LoginDialog.vue";
 import {checkSession} from "@/action/session";
 import {arrayContains, removeArrayItem, substr} from "@/utils/libs";
-
+import i18n from "@/locales/i18n";
 const listBoxHeight = window.innerHeight - 97
 const list = ref([])
 const showLoginDialog = ref(false)

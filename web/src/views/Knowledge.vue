@@ -9,7 +9,7 @@
 
 <script setup>
 import {ref} from "vue"
-
+import i18n from "@/locales/i18n";
 const winHeight = ref(window.innerHeight)
 </script>
 
